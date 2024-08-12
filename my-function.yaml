@@ -1,0 +1,11 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: my-function
+spec:
+  template:
+    spec:
+      containers:
+        - image: docker.io/nagaajesh/my-function:latest
+          ports:
+            - containerPort: 8080
